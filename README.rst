@@ -1,3 +1,10 @@
+Description
+===========
+
+This django application is for having a (beautiful) radiator view of all your jobs in Jenkins.
+
+It can be customized for just see a certain view, so maybe it will be good for your customer or your global board.
+
 Set Up Instructions
 ===================
 
