@@ -5,6 +5,8 @@ This django application is for having a (beautiful) radiator view of all your jo
 
 It can be customized for just see a certain view, so maybe it will be good for your customer or your global board.
 
+.. image:: screenshot.png
+
 Set Up Instructions
 ===================
 
