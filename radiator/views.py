@@ -25,8 +25,9 @@ def builds(request):
 
     url = settings.JENKINS_URL
     view = request.GET.get('view') or settings.JENKINS_DEFAULT_URL
+    timeout = settings.JENKINS_TIMEOUT
 
-    jenkins = JenkinsCI(url, view)
+    jenkins = JenkinsCI(url=url, view=view, timeout=timeout)
 
     jobs = None
     result = None

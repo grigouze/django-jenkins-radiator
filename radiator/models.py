@@ -2,14 +2,12 @@ import socket
 import urllib2
 import json
 
-from django.conf import settings
-
 class JenkinsCI(object):
     """
         The real class for get information in jenkins server
     """
 
-    def __init__(self, url=None, view=None):
+    def __init__(self, url=None, view=None, timeout=0):
         if url is None:
             url = 'http://' + socket.gethostname()
         if view is None:
@@ -19,16 +17,16 @@ class JenkinsCI(object):
 
         self.url = url
         self.view = view
+        self.timeout = timeout
 
         return None
 
-    @staticmethod
-    def urlopen(url):
+    def urlopen(self, url):
         """
             Binding to urllib2.urlopen
         """
 
-        timeout = settings.JENKINS_TIMEOUT
+        timeout = self.timeout
 
         return urllib2.urlopen(url, timeout=timeout)
 
